@@ -43,8 +43,8 @@ case $PARAM in
 	rm -f /tmp/pids
 	rm -f /tmp/sks
 	rm -f /tmp/user1
-  service sshd restart
-  systemctl restart sshd
+        service sslh restart
+        service sshd restart
 	exit 0
 ;;
 2)
@@ -73,8 +73,8 @@ case $PARAM in
 	rm -f /tmp/sks
 	rm -f /tmp/user1
 	rm -f /tmp/user2
-  service sshd restart
-  systemctl restart sshd
+        service sslh restart
+        service sshd restart
 	exit 0
 ;;
 *)
@@ -87,8 +87,8 @@ case $PARAM in
 	exit 1
 ;;
 esac
-
-service dropbear restart
+service sslh restart
+service sshd restart
 
 cd ~/
 rm -f /root/IP
