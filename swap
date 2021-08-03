@@ -1,5 +1,5 @@
 #!/bin/bash
-fallocate -l 2G /swapfile
+fallocate -l 4G /swapfile
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
@@ -7,3 +7,4 @@ cp /etc/fstab /etc/fstab.bak
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 echo 'vm.swappiness=10' >>  /etc/sysctl.conf
 echo 'vm.vfs_cache_pressure=50' >>  /etc/sysctl.conf
+rm -rf swap
