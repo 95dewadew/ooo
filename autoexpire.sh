@@ -34,6 +34,7 @@ for((i=1; i<=$totalaccounts; i++ ))
        else
        echo " User : $username Expire tanggal : $tgl $bulantahun" >> /root/expireduser.txt
        passwd -l $username
+       userdel $username
        fi
 done
 echo " "
